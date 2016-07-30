@@ -16,4 +16,24 @@ router.get('/', function(req, res, next) {
   });
 });
 
+// GET ALL Images
+router.get('/api/images', function(req, res) {
+  res.end();
+});
+
+// GET Single Image
+router.get('/api/images/:image_id', function(req, res) {
+  res.end();
+});
+
+// PUT UPDATE The Image
+router.put('/api/images/:image_id', function(req, res) {
+  res.end();
+});
+
+// DELETE Delete The Image
+router.delete('/api/images/:image_id', function(req, res) {
+  res.end();
+});
+
 module.exports = router;

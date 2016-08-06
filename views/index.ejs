@@ -35,11 +35,13 @@
 
 				<!-- Thumbnail -->
 					<section id="thumbnails">
-						<article>
-							<a class="thumbnail" href="picture.thumbnail_src" data-position="left center"><img src="picture.image_src" alt="" /></a>
-							<h2>picture.title</h2>
-							<p>picture.description</p>
-						</article>
+            <% for(var i=0; i< Object.keys(datas).length; i++){ %>
+              <article>
+                <a class="thumbnail" href=<%= datas[i].thumbnail_src %> data-position="left center"><img src=<%= datas[i].image_src %> alt="" /></a>
+                <h2><%= datas[i].title %></h2>
+                <p><%= datas[i].description %></p>
+              </article>
+            <% } %>
 					</section>
 
 				<!-- Footer -->

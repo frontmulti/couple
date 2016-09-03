@@ -27,12 +27,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use(express.static(path.join(__dirname, 'html5up-lens')));
 
 // db setup
-var db = mongoose.connection;
-mongoose.connect('mongodb://localhost:27017/test');
-db.on('error', console.error);
-db.once('open', function() {
-  console.log("Connected to mongod server");
-});
+// var db = mongoose.connection;
+// mongoose.connect('mongodb://localhost:27017/test');
+// db.on('error', console.error);
+// db.once('open', function() {
+//   console.log("Connected to mongod server");
+// });
 
 app.use('/', routes);
 // app.use('/users', users);

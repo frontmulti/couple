@@ -6,20 +6,20 @@ var Picture = require('../models/picture');
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  console.log('call /');
-  Picture.find(function(err, pictures) {
-    if(err) return res.status(500).send({error: 'database failure'});
-    res.render('index', { datas: pictures });
-  });
-
-  // fs.readFile(__dirname + '/html5up-lens/index.html', function(error, data) {
-  //   if(error) {
-  //     console.log(error);
-  //   } else {
-  //     res.writeHead(200, {'Content-Type' : 'text/html'});
-  //     res.end(data);
-  //   }
+  // console.log('call /');
+  // Picture.find(function(err, pictures) {
+  //   if(err) return res.status(500).send({error: 'database failure'});
+  //   res.render('index', { datas: pictures });
   // });
+
+  fs.readFile(__dirname + '/html5up-lens/index.html', function(error, data) {
+    if(error) {
+      console.log(error);
+    } else {
+      res.writeHead(200, {'Content-Type' : 'text/html'});
+      res.end(data);
+    }
+  });
 });
 
 // GET Single Image
